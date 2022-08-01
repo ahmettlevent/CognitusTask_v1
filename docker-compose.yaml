@@ -1,0 +1,90 @@
+version: '3'
+
+networks:
+    nw_1:
+        external: true
+    nw_2:
+        external: true
+
+services:
+
+  web:
+    tty: true
+    container_name: web
+    restart: on-failure
+    networks:
+      - nw_1
+    build: ./django_app
+    volumes:
+      - static_files:/usr/src/app/static
+    depends_on:
+      - db
+    ports:
+      - "8081:8000"
+    command: "python3 manage.py runserver 0.0.0.0:8000"
+
+  db:
+    container_name: db
+    networks:
+      - nw_1
+      - nw_2
+    build: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: "Abc1234!,"
+      MYSQL_DATABASE: "cognitus_task"
+      MYSQL_ROOT_HOST: '%'  # needs to be enclosed with quotes
+
+  algorithm:
+      tty: true
+      container_name: algorithm
+      build: ./fastapi_app
+      links:
+        - redis
+      depends_on:
+        - redis
+      networks:
+        - nw_1
+        - nw_2
+      command: "uvicorn app:app --host 0.0.0.0 --port 8083"
+      environment: 
+        LC_ALL: C.UTF-8
+        LANG: C.UTF-8
+
+  algorithm_celery:
+      tty: true
+      restart: on-failure
+      container_name: algorithm_celery
+      build : ./celery_app
+      depends_on:
+        - redis
+        - db
+      networks:
+        - nw_2
+      command : "celery -A celery_app.worker worker"
+      environment: 
+        LC_ALL: C.UTF-8
+        LANG: C.UTF-8
+ 
+  redis:
+    container_name: redis
+    image: redis:5.0.5
+    hostname: redis
+    networks:
+      - "nw_1"
+      - "nw_2"
+
+  webserver:
+    build: ./nginx
+    container_name: webserver
+    restart: unless-stopped
+    volumes:
+      - static_files:/home/static/
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - "nw_1"
+
+
+volumes:
+  static_files:
