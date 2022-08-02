@@ -8,7 +8,6 @@ scipy==0.19.0
 six==1.14.0
 xlrd==1.1.0
 SQLAlchemy==1.4.39
-mysqlclient
-pymysql
-redis
-PyMySQL[rsa]
+mysqlclient==2.1.1
+pymysql==1.0.2
+redis==4.3.4

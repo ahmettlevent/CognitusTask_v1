@@ -52,7 +52,6 @@ services:
 
   algorithm_celery:
       tty: true
-      restart: on-failure
       container_name: algorithm_celery
       build : ./celery_app
       depends_on:
