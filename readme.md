@@ -1,4 +1,4 @@
-# Celery Async Task - Alternatives for Local 
+# Celery Async Task - Local Alternatives 
 
 ### Redis Task Queue RQ
 - #### Advantages
