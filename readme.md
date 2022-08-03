@@ -1,10 +1,10 @@
 # Local Celery Async Task Alternatives
 
 ### Redis Task Queue RQ
-#### Advantages
+- #### Advantages
 
-#### Disadvantages
-- Each worker will process a single job at a time. Within a worker, there is no concurrent processing going on. If you want to perform jobs concurrently, you need to start more workers.
+- #### Disadvantages
+- - Each worker will process a single job at a time. Within a worker, there is no concurrent processing going on. If you want to perform jobs concurrently, you need to start more workers.
 
 ### Task Tiger
 #### Advantages
