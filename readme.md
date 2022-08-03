@@ -1,5 +1,7 @@
 # Local & Cloud Alternatives for Celery Async Task
 
+[LOCAL]
+
 # Local Alternatives
 
 ### Redis Task Queue RQ
