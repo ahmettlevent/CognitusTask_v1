@@ -1,25 +1,52 @@
-### Local Alternatives
+# Celery Async Task - Local Alternatives 
 
-## Redis Task Queue RQ
-- - Each worker will process a single job at a time. Within a worker, there is no concurrent processing going on. If you want to perform jobs concurrently, simply start more workers.
+### Redis Task Queue RQ
+- #### Advantages
+  - 
+- #### Disadvantages
+  - Each worker will process a single job at a time. Within a worker, there is no concurrent processing going on. If you want to perform jobs concurrently, you need to start more workers.
+  - RQ workers will only run on systems that implement fork(). Most notably, this means it is not possible to run the workers on Windows without using the Windows Subsystem for Linux and running in a bash shell.
 
-# Task Tiger
-- - https://github.com/closeio/tasktiger#features"
+### Task Tiger
+- #### Advantages
+  - https://github.com/closeio/tasktiger#features"
+- #### Disadvantages
 
-# Task Master
+### Task Master
+- #### Advantages
+  - 
+- #### Disadvantages
 
-# Huey
+### Huey
+- #### Advantages
+- #### Disadvantages
 
-# Kuyruk
+### Kuyruk
+- #### Advantages
+- #### Disadvantages
 
-# Dramatiq
+### Dramatiq
+- #### Advantages
+- #### Disadvantages
 
-# Django-carrot
+### Django-carrot
+- #### Advantages
+- #### Disadvantages
 
-# tasq
+### tasq
+- #### Advantages
+- #### Disadvantages
 
-# WorQ
+### WorQ
+- #### Advantages
+- #### Disadvantages
 
-## Cloud Based Solutions
-- Google Task Queue API
-- AWS's Cloud Watch Events
+# Celery Async Task - Cloud Based Solutions
+
+### Google Task Queue API
+- #### Advantages
+- #### Disadvantages
+
+### AWS's Cloud Watch Events
+- #### Advantages
+- #### Disadvantages
