@@ -28,6 +28,6 @@
 
 - # Cloud Based Solutions
 
-1. ### Google Task Queue API
+* ### Google Task Queue API
 
-2. ### AWS's Cloud Watch Events
+* ### AWS's Cloud Watch Events
