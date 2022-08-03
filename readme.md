@@ -1,6 +1,6 @@
 # Local & Cloud Alternatives for Celery Async Task
 
-[LOCAL]
+[TOC]
 
 # Local Alternatives
 
