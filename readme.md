@@ -1,6 +1,4 @@
-# Local & Cloud Alternatives for Celery Async Task
-
-- # Local Alternatives
+# Local Celery Async Task Alternatives
 
 * ### Redis Task Queue RQ
 
@@ -26,7 +24,7 @@
 
 * ### WorQ
 
-- # Cloud Based Solutions
+# Cloud Based Celery Async Task Solutions
 
 * ### Google Task Queue API
 
