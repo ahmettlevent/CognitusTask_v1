@@ -2,51 +2,50 @@
 
 ### Redis Task Queue RQ
 - #### Advantages
-
+  - 
 - #### Disadvantages
   - Each worker will process a single job at a time. Within a worker, there is no concurrent processing going on. If you want to perform jobs concurrently, you need to start more workers.
 
 ### Task Tiger
-#### Advantages
-- https://github.com/closeio/tasktiger#features"
-#### Disadvantages
+- #### Advantages
+  - https://github.com/closeio/tasktiger#features"
+- #### Disadvantages
 
 ### Task Master
-#### Advantages
-- 
-#### Disadvantages
+- #### Advantages
+  - 
+- #### Disadvantages
 
 ### Huey
-#### Advantages
-
-#### Disadvantages
+- #### Advantages
+- #### Disadvantages
 
 ### Kuyruk
-#### Advantages
-#### Disadvantages
+- #### Advantages
+- #### Disadvantages
 
 ### Dramatiq
-#### Advantages
-#### Disadvantages
+- #### Advantages
+- #### Disadvantages
 
 ### Django-carrot
-#### Advantages
-#### Disadvantages
+- #### Advantages
+- #### Disadvantages
 
 ### tasq
-#### Advantages
-#### Disadvantages
+- #### Advantages
+- #### Disadvantages
 
 ### WorQ
-#### Advantages
-#### Disadvantages
+- #### Advantages
+- #### Disadvantages
 
 # Cloud Based Celery Async Task Solutions
 
 ### Google Task Queue API
-#### Advantages
-#### Disadvantages
+- #### Advantages
+- #### Disadvantages
 
 ### AWS's Cloud Watch Events
-#### Advantages
-#### Disadvantages
+- #### Advantages
+- #### Disadvantages
