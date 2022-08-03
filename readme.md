@@ -1,4 +1,4 @@
-# Local Celery Async Task Alternatives
+# Celery Async Task - Alternatives for Local 
 
 ### Redis Task Queue RQ
 - #### Advantages
@@ -40,7 +40,7 @@
 - #### Advantages
 - #### Disadvantages
 
-# Cloud Based Celery Async Task Solutions
+# Celery Async Task - Cloud Based Solutions
 
 ### Google Task Queue API
 - #### Advantages
