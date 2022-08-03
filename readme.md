@@ -1,4 +1,4 @@
-## Run Commands
+# Run Commands
 - celery -A celery_app.worker worker                                  # celery worker
 - python3 app.py                                                      # flask app
 - python3 manage.py runserver                                         # django 
