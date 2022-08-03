@@ -1,7 +1,5 @@
 # Local & Cloud Alternatives for Celery Async Task
 
-[TOC]
-
 - # Local Alternatives
 
 1. ### Redis Task Queue RQ
@@ -14,22 +12,22 @@
 #### Advantages
 - https://github.com/closeio/tasktiger#features"
 
-3. ## Task Master
+3. ### Task Master
 
-4. ## Huey
+4. ### Huey
 
-5. ## Kuyruk
+5. ### Kuyruk
 
-6. ## Dramatiq
+6. ### Dramatiq
 
-7. ## Django-carrot
+7. ### Django-carrot
 
-8. ## tasq
+8. ### tasq
 
-9. ## WorQ
+9. ### WorQ
 
 - # Cloud Based Solutions
 
-1. ## Google Task Queue API
+1. ### Google Task Queue API
 
-2. ## AWS's Cloud Watch Events
+2. ### AWS's Cloud Watch Events
