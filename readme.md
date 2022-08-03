@@ -2,34 +2,34 @@
 
 [TOC]
 
-# Local Alternatives
+- # Local Alternatives
 
 1. ### Redis Task Queue RQ
 
 #### Advantages
 - Each worker will process a single job at a time. Within a worker, there is no concurrent processing going on. If you want to perform jobs concurrently, simply start more workers.
 
-### Task Tiger
+2. ### Task Tiger
 
 #### Advantages
 - https://github.com/closeio/tasktiger#features"
 
-## Task Master
+3. ## Task Master
 
-## Huey
+4. ## Huey
 
-## Kuyruk
+5. ## Kuyruk
 
-## Dramatiq
+6. ## Dramatiq
 
-## Django-carrot
+7. ## Django-carrot
 
-## tasq
+8. ## tasq
 
-## WorQ
+9. ## WorQ
 
-# Cloud Based Solutions
+- # Cloud Based Solutions
 
-## Google Task Queue API
+1. ## Google Task Queue API
 
-## AWS's Cloud Watch Events
+2. ## AWS's Cloud Watch Events
