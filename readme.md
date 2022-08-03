@@ -2,7 +2,9 @@
 
 ### Redis Task Queue RQ
 - #### Advantages
-  - 
+  - Bulk task's  
+  - Job dependencies via mutex lock
+  - Job callbacks (on_success & on_failure)
 - #### Disadvantages
   - Each worker will process a single job at a time. Within a worker, there is no concurrent processing going on. If you want to perform jobs concurrently, you need to start more workers.
 
