@@ -1,4 +1,3 @@
-from time import sleep
 from mlModels.model import MlModel
 from database import engine,SessionLocal
 from models import LabeledData
@@ -11,7 +10,7 @@ allDataQueryStatement = session.query(LabeledData).statement
 mlModel = MlModel(allDataQueryStatement,engine)
 redis_conn = Redis("localhost",6379)
 
-@job(['high',"low"], connection=redis_conn, timeout=5)
+@job('high', connection=redis_conn, timeout=5)
 def predict_model(user_text):
     res = mlModel.predict(user_text)
     if res[0][0].size != 0 and res[0][1].size != 0:
