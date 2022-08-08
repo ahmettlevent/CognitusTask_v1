@@ -32,7 +32,7 @@ async def train(job_id = JobId):
 
 @app.get('/predict', response_model=Prediction, status_code=200)
 def predict(user_text = UserText):
-    job = q2.enqueue("tasks.predict_model",user_text,at_front=True,result_ttl = 5000,retry=Retry(max=3, interval=[10, 30, 60]) )
+    job = q2.enqueue("tasks.predict_model",str(user_text),at_front=True,result_ttl = 5000,retry=Retry(max=3, interval=[10, 30, 60]) )
     return {'detail': 'Processing',"job_id":job.id}
 
 @app.get('/predict_result', response_model=PredictionResult, status_code=200)
