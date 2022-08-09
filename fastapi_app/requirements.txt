@@ -1,5 +1,6 @@
 fastapi==0.79.0
 pydantic==1.9.1
-uvicorn==0.16.0
+pytest==7.0.1
 redis==4.3.4
-
+rq==1.11.0
+uvicorn==0.16.0

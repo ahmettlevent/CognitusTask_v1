@@ -4,7 +4,6 @@ from schemas import *
 from rq import Queue,Retry
 from rq.job import Job
 from rq.exceptions import NoSuchJobError
-import multiprocessing
 
 redis_conn = Redis("localhost",6379)
 q = Queue("low",connection=redis_conn)
