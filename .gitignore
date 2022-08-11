@@ -1,3 +1,4 @@
 *.pyc
 */__pycache__
-env*
+/env3.6.9/
+/env3.7/
