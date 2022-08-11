@@ -1,12 +1,13 @@
 from pydantic import BaseModel
 
-class UserText(BaseModel):
-    text : str
+class MessageId(BaseModel):
+    message : dict
 
-class Train(BaseModel):
+class HelloUser(BaseModel):
     detail: str
+    message : dict  
 
-class Prediction(BaseModel):
+class Result(BaseModel):
     detail: str
     x:float
     y:float

@@ -1,5 +1,5 @@
-celery==5.1.2
-fastapi==0.79.0
-pydantic==1.9.1
-uvicorn==0.16.0
+fastapi
+pydantic
+uvicorn
 redis
+dramatiq
