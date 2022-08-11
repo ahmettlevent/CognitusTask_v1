@@ -4,6 +4,3 @@
 - python3 manage.py runserver                                         # django 
 - mysql -u root -p                                                    # mysql 
 - uvicorn app:app --host <host_name> --port <port>                    # fastapi
-
-# Errors
-
