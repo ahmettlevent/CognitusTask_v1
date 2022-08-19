@@ -5,7 +5,6 @@ from sklearn import cross_validation
 from sklearn.svm import SVC
 from sklearn.metrics import precision_score, accuracy_score, recall_score
 
-
 class MlModel():
     def __init__(self,statement,dbEngine) -> None:
         self.text, self.label = self.create_data(statement,dbEngine)

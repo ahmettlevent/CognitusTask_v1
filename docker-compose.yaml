@@ -75,7 +75,6 @@ services:
   webserver:
     build: ./nginx
     container_name: webserver
-    restart: unless-stopped
     volumes:
       - static_files:/home/static/
     ports:
@@ -83,6 +82,9 @@ services:
       - "443:443"
     networks:
       - "nw_1"
+    environment: 
+      NGINX_UPSTREAM_WEB: web:8000
+      NGINX_UPSTREAM_ALGORITHM: algorithm:8083
 
 
 volumes:
