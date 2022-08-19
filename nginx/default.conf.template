@@ -1,0 +1,59 @@
+server {
+        resolver 127.0.0.11 valid=30s;
+        listen 80;
+        listen [::]:80;
+        server_name _;
+
+        access_log /var/log/nginx/reverse-access.log;
+        error_log /var/log/nginx/reverse-error.log;
+
+        location / {
+            set $upstream http://${NGINX_UPSTREAM_WEB};
+            proxy_set_header Client-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header Host $host;
+            proxy_pass $upstream;
+	}
+
+        location /static/ {
+            autoindex on;
+            alias /home/static/;
+	}
+}
+
+server {
+        resolver 127.0.0.11 valid=30s;
+        listen 443;
+        listen [::]:443;
+        server_name _;
+    	ssl on;
+        ssl_certificate /etc/ssl/ahmetlevent_certificate.crt;
+    	ssl_certificate_key /etc/ssl/ahmetlevent_certificate.key;
+
+        access_log /var/log/nginx/reverse-access.log;
+        error_log /var/log/nginx/reverse-error.log;
+
+        location / {
+            set $upstream http://${NGINX_UPSTREAM_WEB};
+
+            proxy_set_header Client-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header Host $host;
+            proxy_pass $upstream;
+	}
+        location /algorithm/train {
+            set $upstream http://${NGINX_UPSTREAM_ALGORITHM}/train;
+            proxy_set_header Client-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header Host $host;
+            proxy_pass $upstream;
+	}
+        location /static/ {
+            autoindex on;
+            alias /home/static/;
+	}
+
+}	
+
+
+
