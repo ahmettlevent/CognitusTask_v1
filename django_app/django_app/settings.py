@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-q2vjfu3x0(3fyery(kuc0oap6xt@42dqu9p6od#&il+qz3*t+u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost","127.0.0.1","0.0.0.0","ahmetlevent.com","www.ahmetlevent.com","192.168.1.29"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "0.0.0.0",
+                 "ahmetlevent.com", "www.ahmetlevent.com", "192.168.1.29"]
 
 
 # Application definition
@@ -78,10 +79,9 @@ WSGI_APPLICATION = 'django_app.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',   
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'cognitus_task',
         'USER': 'root',
         'PASSWORD': 'Abc1234!,',
@@ -94,7 +94,7 @@ DATABASES = {
             'HOST': 'db',
         },
     }
-    
+
 }
 
 # Password validation
@@ -134,7 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT =  os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -152,8 +152,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
-} 
+}
 
 
-
-ALGORITHM_URL = os.getenv("ALGORITHM_URL","http://algorithm:8083")
+ALGORITHM_URL = os.getenv("ALGORITHM_URL", "http://algorithm:8083")

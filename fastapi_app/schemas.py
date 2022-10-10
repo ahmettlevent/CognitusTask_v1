@@ -1,12 +1,15 @@
 from pydantic import BaseModel
 
+
 class UserText(BaseModel):
-    text : str
+    text: str
+
 
 class Train(BaseModel):
     detail: str
 
+
 class Prediction(BaseModel):
     detail: str
-    x:float
-    y:float
+    x: float
+    y: float

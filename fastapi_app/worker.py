@@ -9,4 +9,3 @@ app = Celery(
     backend=BACKEND_URI,
     include=['celery_app.tasks']
 )
-
